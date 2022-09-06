@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Facsenac\\.nuget\\packages\\": {}
+    "C:\\Users\\Igor e Isabele\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Facsenac\\Desktop\\Aula05.09\\Aula05.09.csproj",
+      "projectUniqueName": "C:\\Users\\Igor e Isabele\\OneDrive\\Área de Trabalho\\coding-Senac\\Aula05.09\\Aula05.09.csproj",
       "projectName": "Aula05.09",
-      "projectPath": "C:\\Users\\Facsenac\\Desktop\\Aula05.09\\Aula05.09.csproj",
-      "packagesPath": "C:\\Users\\Facsenac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Facsenac\\Desktop\\Aula05.09\\obj\\",
+      "projectPath": "C:\\Users\\Igor e Isabele\\OneDrive\\Área de Trabalho\\coding-Senac\\Aula05.09\\Aula05.09.csproj",
+      "packagesPath": "C:\\Users\\Igor e Isabele\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Igor e Isabele\\OneDrive\\Área de Trabalho\\coding-Senac\\Aula05.09\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Facsenac\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Igor e Isabele\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -49,16 +49,35 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,3 +14,19 @@ C:\Users\Facsenac\Desktop\Aula05.09\obj\Debug\net5.0\Aula05.09.dll
 C:\Users\Facsenac\Desktop\Aula05.09\obj\Debug\net5.0\ref\Aula05.09.dll
 C:\Users\Facsenac\Desktop\Aula05.09\obj\Debug\net5.0\Aula05.09.pdb
 C:\Users\Facsenac\Desktop\Aula05.09\obj\Debug\net5.0\Aula05.09.genruntimeconfig.cache
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\bin\Debug\net5.0\Aula05.09.exe
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\bin\Debug\net5.0\Aula05.09.deps.json
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\bin\Debug\net5.0\Aula05.09.runtimeconfig.json
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\bin\Debug\net5.0\Aula05.09.runtimeconfig.dev.json
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\bin\Debug\net5.0\Aula05.09.dll
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\bin\Debug\net5.0\Aula05.09.pdb
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.csproj.AssemblyReference.cache
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.AssemblyInfoInputs.cache
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.AssemblyInfo.cs
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.csproj.CoreCompileInputs.cache
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.dll
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\refint\Aula05.09.dll
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.pdb
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\Aula05.09.genruntimeconfig.cache
+C:\Users\Igor e Isabele\OneDrive\Área de Trabalho\coding-Senac\Aula05.09\obj\Debug\net5.0\ref\Aula05.09.dll
