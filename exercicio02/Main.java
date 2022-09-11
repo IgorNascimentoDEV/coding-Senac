@@ -44,28 +44,96 @@ class Main {
       avCaxanga.tamanho = 6200f;
       avCaxanga.qtdLombada = 6;
 
-    
-    System.out.println(start.nome);
-    System.out.println(start.velocidade);
-    start.multa = Pista.detran(start.velocidade, start.multa);
-    System.out.println(start.multa);
 
-    System.out.println(lander.nome);
-    System.out.println(lander.velocidade);
-    lander.multa = Pista.detran(lander.velocidade, lander.multa);
-    System.out.println(lander.multa);
-    
-    System.out.println(shineray.nome);
-    System.out.println(shineray.velocidade);
-    shineray.multa = Pista.detran(shineray.velocidade, shineray.multa);
-    System.out.println(shineray.multa);
+    do{
+      switch(Pista.menu()){
+        //caso a escolha seja a Avenida Recife
+        case 1:
+          Moto.chegada(start.velocidade, lander.velocidade, shineray.velocidade);
+          System.out.println("--------------------------------------------------");
+          //informações sobre as motos
+          
+          start.velocidade = Moto.Desacelera(start.velocidade, avRecife.qtdLombada);
+          System.out.println(start.nome);
+          System.out.println("Estava em " + start.velocidade + "km");
+          start.multa = Pista.detran(start.velocidade, start.multa);
 
+          System.out.println("--------------------------------------------------");
+          
+          lander.velocidade = Moto.Desacelera(lander.velocidade, avRecife.qtdLombada);
+          System.out.println(lander.nome);
+          System.out.println("Estava em " + lander.velocidade + "km");
+          lander.multa = Pista.detran(lander.velocidade, lander.multa);
 
-    Moto.chegada(start.velocidade, lander.velocidade, shineray.velocidade);
+          System.out.println("--------------------------------------------------");
+          
+          shineray.velocidade = Moto.Desacelera(shineray.velocidade, avRecife.qtdLombada);
+          System.out.println(shineray.nome);
+          System.out.println("Estava em " + shineray.velocidade + "km");
+          shineray.multa = Pista.detran(shineray.velocidade, shineray.multa);
 
-    
-    System.out.println(Pista.menu());
+           System.out.println("--------------------------------------------------");
+          break;
 
+         //caso a escolha seja a Avenida Boa Viagem
+        case 2:
+           Moto.chegada(start.velocidade, lander.velocidade, shineray.velocidade);
+          System.out.println("--------------------------------------------------");
+          //informações sobre as motos
+          
+          start.velocidade = Moto.Desacelera(start.velocidade, avBoaViagem.qtdLombada);
+          System.out.println(start.nome);
+          System.out.println("Estava em " + start.velocidade + "km");
+          start.multa = Pista.detran(start.velocidade, start.multa);
+
+          System.out.println("--------------------------------------------------");
+          
+          lander.velocidade = Moto.Desacelera(lander.velocidade, avBoaViagem.qtdLombada);
+          System.out.println(lander.nome);
+          System.out.println("Estava em " + lander.velocidade + "km");
+          lander.multa = Pista.detran(lander.velocidade, lander.multa);
+
+          System.out.println("--------------------------------------------------");
+          
+          shineray.velocidade = Moto.Desacelera(shineray.velocidade, avBoaViagem.qtdLombada);
+          System.out.println(shineray.nome);
+          System.out.println("Estava em " + shineray.velocidade + "km");
+          shineray.multa = Pista.detran(shineray.velocidade, shineray.multa);
+
+           System.out.println("--------------------------------------------------");
+          break;
+
+         //caso a escolha seja a Avenida Caxangá
+        case 3:
+           Moto.chegada(start.velocidade, lander.velocidade, shineray.velocidade);
+          System.out.println("--------------------------------------------------");
+          //informações sobre as motos
+          
+          start.velocidade = Moto.Desacelera(start.velocidade, avCaxanga.qtdLombada);
+          System.out.println(start.nome);
+          System.out.println("Estava em " + start.velocidade + "km");
+          start.multa = Pista.detran(start.velocidade, start.multa);
+
+          System.out.println("--------------------------------------------------");
+          
+          lander.velocidade = Moto.Desacelera(lander.velocidade, avCaxanga.qtdLombada);
+          System.out.println(lander.nome);
+          System.out.println("Estava em " + lander.velocidade + "km");
+          lander.multa = Pista.detran(lander.velocidade, lander.multa);
+
+          System.out.println("--------------------------------------------------");
+          
+          shineray.velocidade = Moto.Desacelera(shineray.velocidade, avCaxanga.qtdLombada);
+          System.out.println(shineray.nome);
+          System.out.println("Estava em " + shineray.velocidade + "km");
+          shineray.multa = Pista.detran(shineray.velocidade, shineray.multa);
+
+           System.out.println("--------------------------------------------------");
+          break;
+
+        default:System.out.println("Digite uma opção valida");
+      }
+    }while(Pista.desejaContinuar() != 0);
     
   }
-}
+}                                                                                                          
