@@ -1,4 +1,4 @@
-<h1>Ruby</h1> 
+<h1 align="center">Ruby</h1> 
 <img width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain.svg" />
 
 <h2>Sobre</h2>
