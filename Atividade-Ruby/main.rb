@@ -1,4 +1,4 @@
-require_relative "Conta"
+require_relative "ContaCorrente"
 require_relative "Cliente"
 
 #Instanciando objetos cliente1 e cliente2
@@ -6,8 +6,8 @@ cliente1 = Cliente.new("Juliana Silva", "F", 23, "Enferemeira")
 cliente2 = Cliente.new("Manuel Silva", "M", 33, "Vendedor")
 
 #Instanciando objetos conta1 e conta2
-conta1 = Conta.new(cliente1, "1", "202")
-conta2 = Conta.new(cliente2, "2", "202")
+conta1 = ContaCorrente.new(cliente1, "1", "202")
+conta2 = ContaCorrente.new(cliente2, "2", "202")
 
 #Acessando valores 
 puts "NOME: " + conta1.cliente.nome

@@ -1,7 +1,6 @@
 class Conta 
 
     # para a criação de classes em Ruby, primeiro se usa a palavra chave class, seguido do seu nome.
-<<<<<<< HEAD
       
     # em Ruby não se usa as chaves para delimitar a caixa de código, e sim se usa a palavra chave End, para marcar o final do código class. 
   
@@ -11,18 +10,24 @@ class Conta
   
     #Em Ruby é utilizado o "puts" como comando de saída e o "gets.chomp" como comando de entrada
   
-    attr_accessor :cliente
-    attr_accessor :saldo
-    attr_accessor :numero
-    attr_accessor :agencia
+    attr_accessor :cliente, :saldo, :numero, :agencia, :valorDiferenca
     
     def initialize (cliente, numero, agencia)
       @cliente = cliente
       @numero = numero
       @agencia = agencia
       @saldo = 0
+      @valorDiferenca = 0
     end 
     
+    def diferenca
+      if @saldo >= 1
+        @valorDiferenca = 1
+      elsif @saldo < 1 and @saldo > 0
+        @valorDiferenca = @saldo
+      end
+    end  
+
     def extrato
       puts "\n======= EXTRATO DA CONTA ======="
       puts "Nome do cliente: #{cliente.nome}"
@@ -60,12 +65,13 @@ class Conta
     end
   
     def transferir(contaDestino)
+      diferenca
       puts "\n====================== TRANSFERÊNCIA ENTRE CONTAS ========================"
       puts "Informe o valor ao qual você deseja transferir para conta do titular #{contaDestino.cliente.nome}."
       valor = gets.chomp
       
       while valor.to_f > @saldo or valor.to_f == 0 or valor.to_f < 0
-        puts "\nNão foi possível realizar o saque, tente sacar um valor entre R$ 1,00 e #{saldo}"
+        puts "\nNão foi possível realizar o saque, tente sacar um valor entre R$ #{@valorDiferenca} e R$ #{saldo}"
         puts "Informe o valor que você deseja transferir:"
         valor = gets.chomp
       end
@@ -77,17 +83,3 @@ class Conta
       puts "Seu saldo atual é R$ #{saldo}"
     end
   end
-=======
-    
-    # em Ruby não se usa as chaves para delimitar a caixa de código, e sim se usa a palavra chave End, para marcar o final do código class . 
-
-    #O "def" diz ao Ruby que estamos definindo um método
-  
-    #Em Ruby, o construtor de uma classe é definido com o uso da palavra-chave initialize
-
-    def initialize (cliente, saldo)
-      @cliente = cliente
-      @saldo = saldo
-    end
-end
->>>>>>> 1b1abb03522f4fd32dbff1062651a97c6256782b
