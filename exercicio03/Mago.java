@@ -1,4 +1,6 @@
-public class Mago extends Margia {
+public class Mago extends Personagem {
+
+    private Margia poder; 
 
     public Mago(String nome, String forca) {
         super(nome, forca);

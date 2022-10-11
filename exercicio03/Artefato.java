@@ -1,4 +1,4 @@
-public class Artefato extends Personagem{
+public class abstratc Artefato{
     String nomeArtefato;
     String TipoArtefato;
     public String getNomeArtefato() {
