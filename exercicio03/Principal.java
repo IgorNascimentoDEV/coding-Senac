@@ -1,19 +1,26 @@
 class Principal{
 
    
+   
     public static void main(String[] args) {
-      
-        Mago mario = new Mago("","");
+        Margia margia= new Margia();
+        Mago mario = new Mago("mago", margia);
 
         mario.setRaca("Mago");
         mario.setForca("100");
         mario.setVida(1000);
 
-        mario.setNomeMagia("fogo");
-        mario.setNomeArtefato("cajado de fogo");
+        ((Margia) mario.tipo).setNomeMagia("fogo");
+
+        System.out.println(((Margia) mario.tipo).getNomeMagia());
+        
+        ((Margia) mario.tipo).setPoder("do fogo");
+
+        System.out.println(((Margia) mario.tipo).getPoder());
+       
+    
 
 
-        System.out.println(mario.getRaca() + " " + mario.getForca() + " " + mario.getNomeArtefato());
-
+      
     }
 }

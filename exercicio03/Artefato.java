@@ -1,4 +1,4 @@
-public class abstratc Artefato{
+public class Artefato{
     String nomeArtefato;
     String TipoArtefato;
     public String getNomeArtefato() {

@@ -1,14 +1,20 @@
 public class Mago extends Personagem {
 
-    private Margia poder; 
+    Margia poder; 
 
-    public Mago(String nome, String forca) {
-        super(nome, forca);
+    public Margia getPoder() {
+        return poder;
+    }
+
+    public void setPoder(Margia poder) {
+        this.poder = poder;
+    }
+
+    public Mago(String nome, Margia poder) {
+        super(nome, poder);
         //TODO Auto-generated constructor stub
     }
 
-    public char[] getTipo() {
-        return null;
-    }
+   
     
 }

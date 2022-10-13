@@ -1,10 +1,14 @@
-public abstract class Personagem {
+public abstract class Personagem <Artefato> {
     private String forca;
     private String raca;
     private float vida;
-    private Artefato poder;
+    public Artefato tipo;
 
-
+    
+    public Personagem(String raca, Artefato tipo) {
+        this.raca = raca;
+        this.tipo = tipo;
+    }
     public String getForca() {
         return forca;
     }
@@ -23,6 +27,7 @@ public abstract class Personagem {
     public void setVida(float vida) {
         this.vida = vida;
     }
+    
   
 }
 
