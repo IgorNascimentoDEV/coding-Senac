@@ -1,26 +1,25 @@
+import javax.sound.midi.Soundbank;
+
 class Principal{
-
-   
-   
     public static void main(String[] args) {
-        Margia margia= new Margia();
-        Mago mario = new Mago("mago", margia);
+        Magia fogo = new Magia();
+        Arma varinha = new Arma();
+        Mago igor = new Mago("magic", fogo);
 
-        mario.setRaca("Mago");
-        mario.setForca("100");
-        mario.setVida(1000);
+        igor.arma = varinha;
 
-        ((Margia) mario.tipo).setNomeMagia("fogo");
 
-        System.out.println(((Margia) mario.tipo).getNomeMagia());
+
+
+        igor.arma.setTipoArma("varinha");
+        igor.magico.setNomeMagia("fogo");
+
+        System.out.println(igor.magico.getNomeMagia());
+        System.out.println(igor.arma.getTipoArma());
         
-        ((Margia) mario.tipo).setPoder("do fogo");
 
-        System.out.println(((Margia) mario.tipo).getPoder());
-       
-    
-
-
-      
     }
+
+  
+    
 }
