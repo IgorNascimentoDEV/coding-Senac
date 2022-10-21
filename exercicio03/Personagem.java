@@ -41,9 +41,9 @@ public abstract class Personagem{
         p1.setVida(p1.getVida()-p2.getForca());
 
         if(p1.getVida()> p2.getVida()){
-            System.out.println("Igor ganhou");
+            System.out.println(p1.nome + " Ganhou a Batalha");
         }else{
-            System.out.println("Julia ganhou");
+            System.out.println(p2.nome + " Ganhou a Batalha");
         } 
     }
 

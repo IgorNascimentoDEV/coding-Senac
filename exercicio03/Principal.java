@@ -2,20 +2,37 @@
 class Principal{
     public static void main(String[] args) {
 
-        //Instancias refentes ao Mago 
+        //Instancias refentes a Magias 
         Magia fogo = new Magia();
         fogo.setNomeMagia("Magia das chamas");
-        fogo.setPoderMagia(50);
+        fogo.setPoderMagia(350);
         fogo.setNomeArtefato("Cajado das Chamas negras");
-        
-        Mago igor = new Mago("Igor", fogo);
-        igor.setForca(200);
-        igor.setLevel(15);
-        igor.setRaca("Mago");
-        igor.setVida(300);
-        igor.setQtdMagia("Amaterasu");
 
-        //Instacias ferentes ao tipo Valkiria
+        Magia terra = new Magia();
+        terra.setNomeMagia("Magia da terra");
+        terra.setPoderMagia(290);
+        terra.setNomeArtefato("Anel do gigantes Ancestrais");
+
+        /*------------------------------------------------------------------- */
+        
+        //Instancia do Mago da magia tipo fogo
+        Mago merlin = new Mago("Merlin", fogo);
+        merlin.setForca(200);
+        merlin.setLevel(15);
+        merlin.setRaca("Mago");  
+        merlin.setVida(300);
+        merlin.setPoderMago(fogo.getPoderMagia() + merlin.getForca() +  merlin.getLevel());
+
+        //Instacia do Mago da magia tipo terra
+        Mago radagast = new Mago("Radagast", terra); 
+
+
+
+
+
+
+        //Instacias ferentes ao tipo Valkiria111
+
 
         Arma machado = new Arma();
         machado.setNomeArma("Machado de Aço");
@@ -29,31 +46,23 @@ class Principal{
         julia.setVida(400);
 
 
-        /*
-         *   igor.Lutar(igor, julia);
+        
+          merlin.Lutar(merlin, julia);
 
         
 
         
 
         System.out.println(julia.getVida());
-        System.out.println(igor.getVida());
-         */
+        System.out.println(merlin.getVida());
+         
       
         
 
         
 
-        Magia agua = new Magia();
-        agua.setNomeArtefato("varinha");
-        agua.setNomeMagia("poder da agua");
-        agua.setPoderMagia(350);
-
-        Bruxa jujulis = new Bruxa("jujupresao", agua);
 
      
-
-        System.out.println(jujulis.magico.getNomeMagia());
         
 
 

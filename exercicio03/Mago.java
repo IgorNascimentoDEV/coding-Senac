@@ -1,14 +1,17 @@
 public class Mago extends Personagem {
 
-    private String qtdMagia;
+    private int poderMago;
 
-    public String getQtdMagia() {
-        return qtdMagia;
+
+    public int getPoderMago() {
+        return poderMago;
     }
 
-    public void setQtdMagia(String qtdMagia) {
-        this.qtdMagia = qtdMagia;
+
+    public void setPoderMago(int poderMago) {
+        this.poderMago = poderMago;
     }
+
 
     public Mago(String nome, Magia magico) {
         super(nome, magico);
