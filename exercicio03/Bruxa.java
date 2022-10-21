@@ -1,7 +1,7 @@
-public class Bruxa extends Personagem{
+public class Bruxa  extends Personagem{
 
-    public Bruxa(String nome, Magia magc) {
-        super(nome, magc);
+    public Bruxa(String nome, Magia magico) {
+        super(nome, magico);
         //TODO Auto-generated constructor stub
     }
     

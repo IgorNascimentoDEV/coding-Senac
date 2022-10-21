@@ -1,22 +1,50 @@
+import java.util.Random;
+
 public abstract class Personagem{
-    private String forca;
+    private int forca;
     private String raca;
     private float vida;
+    public  String nome;
     private int level;
+
+
     public Magia magico;
     public Arma arma;
+    
 
   
 
-    //Construtor
-    public Personagem(String raca, Magia magico) {
-        this.raca = raca;
+
+    //Construtor 
+    public Personagem(String nome, Magia magico) {
+        this.nome = nome;
         this.magico = magico;
     }
-
-       //Construtor
-       public Personagem( Arma arma) {
+       public Personagem( String nome, Arma arma) {
+        this.nome = nome;
         this.arma = arma;
+    }
+
+
+
+    //Metodos de personagem Lutar
+    public void Lutar(Personagem p1, Personagem p2){
+
+        System.out.println("O personagens estão lutando");
+
+        //primeiro atack
+        p1.setForca(new Random().nextInt(0, getForca()));
+        p2.setVida(p2.getVida()- p1.getForca());
+
+        //segundo atack
+        p2.setForca(new Random().nextInt(0, getForca()));
+        p1.setVida(p1.getVida()-p2.getForca());
+
+        if(p1.getVida()> p2.getVida()){
+            System.out.println("Igor ganhou");
+        }else{
+            System.out.println("Julia ganhou");
+        } 
     }
 
 
@@ -30,10 +58,10 @@ public abstract class Personagem{
     }
 
    
-    public String getForca() {
+    public int getForca() {
         return forca;
     }
-    public void setForca(String forca) {
+    public void setForca(int forca) {
         this.forca = forca;
     }
 

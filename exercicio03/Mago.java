@@ -1,7 +1,17 @@
 public class Mago extends Personagem {
 
-    public Mago(String nome, Magia magc) {
-        super(nome, magc);
+    private String qtdMagia;
+
+    public String getQtdMagia() {
+        return qtdMagia;
+    }
+
+    public void setQtdMagia(String qtdMagia) {
+        this.qtdMagia = qtdMagia;
+    }
+
+    public Mago(String nome, Magia magico) {
+        super(nome, magico);
         //TODO Auto-generated constructor stub
     }
 
