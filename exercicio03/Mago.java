@@ -2,6 +2,11 @@ public class Mago extends Personagem {
 
     private int poderMago;
 
+    
+    public Mago(String nome, Magia magico) {
+        super(nome, magico);
+    }
+
 
     public int getPoderMago() {
         return poderMago;
@@ -13,9 +18,5 @@ public class Mago extends Personagem {
     }
 
 
-    public Mago(String nome, Magia magico) {
-        super(nome, magico);
-        //TODO Auto-generated constructor stub
-    }
 
 }
