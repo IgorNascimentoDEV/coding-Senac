@@ -9,12 +9,9 @@ public abstract class Personagem{
     private int poderTotal;
     private boolean vencedor = false;
 
-
     public Magia magico;
     public Arma arma;
     
-
-  
 
 
     //Construtor 

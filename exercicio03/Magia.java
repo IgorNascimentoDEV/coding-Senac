@@ -20,6 +20,4 @@ public class Magia extends Artefato{
         this.nomeMagia = nomeMagia;
     }
     
-
-  
 }

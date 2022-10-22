@@ -16,7 +16,4 @@ public class Mago extends Personagem {
     public void setPoderMago(int poderMago) {
         this.poderMago = poderMago;
     }
-
-
-
 }

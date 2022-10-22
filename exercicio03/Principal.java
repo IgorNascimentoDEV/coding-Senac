@@ -91,18 +91,6 @@ class Principal{
          
   //metodo de torneio entre todos os personagens instanciados
   meliodas.Torneio(merlin, radagast, julia, meliodas);
-        
-
-        
-
-
-     
-        
-
-
-        
-    }
-
   
-    
+    } 
 }

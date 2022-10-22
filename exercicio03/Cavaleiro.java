@@ -35,8 +35,5 @@ public class Cavaleiro extends Personagem{
     public void setVelocidadeAtack(int velocidadeAtack) {
         this.velocidadeAtack = velocidadeAtack;
     }
-
-    
-    
-    
+  
 }
