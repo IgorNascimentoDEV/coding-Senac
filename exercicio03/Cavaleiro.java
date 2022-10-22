@@ -9,20 +9,23 @@ public class Cavaleiro extends Personagem{
         super(nome, arma);
     }
 
-    
-
-    public int getPoderCavalheiro() {
-        return poderCavaleiro;
-    }
-
+ 
+    //metodos acessores
     public void setPoderCavalheiro(int poderCavalheiro, boolean escudo) {
         if(escudo == true){
             this.poderCavaleiro = poderCavalheiro + 100;
         }else{
             this.poderCavaleiro = poderCavalheiro;
-
         }
-        
+    }
+
+    public void setPoderCavalheiro(int poderCavalheiro) {
+            this.poderCavaleiro = poderCavalheiro;
+      
+    }
+
+    public int getPoderCavalheiro() {
+        return poderCavaleiro;
     }
 
     public int getVelocidadeAtack() {
