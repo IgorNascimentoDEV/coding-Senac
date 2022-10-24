@@ -1,16 +1,17 @@
 import java.util.Random;
 
 public abstract class Personagem{
+    public  String nome;
     private int forca;
     private String raca;
     private float vida;
-    public  String nome;
     private int level;
     private int poderTotal;
     private boolean vencedor = false;
 
     public Magia magico;
     public Arma arma;
+    
     
 
 
@@ -19,7 +20,7 @@ public abstract class Personagem{
         this.nome = nome;
         this.magico = magico;
     }
-       public Personagem( String nome, Arma arma) {
+    public Personagem( String nome, Arma arma) {
         this.nome = nome;
         this.arma = arma;
     }
