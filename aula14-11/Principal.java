@@ -1,10 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
+import org.ietf.jgss.Oid;
 
 
 public class Principal{
 
+
     public static void main(String[] args) {
+        //Instacia do Leitor
+        Scanner leitor = new Scanner(System.in);
         //Declarando Array de Alunos
         Aluno[] alunos = new Aluno[50];
 
@@ -36,17 +42,28 @@ public class Principal{
             System.out.println(alunolist.getNome());
         }
 
-        //essa aula continua
+        alunosListas.get(0).setNome("alterado");
 
 
+        for(Aluno alunolist : alunosListas){
+            System.out.println(alunolist.getNome());
+        }
 
+        //Cadastrando alunos na Lista:
+        ArrayList<Aluno> listaDinamicaDeAlunos = new ArrayList<>();
 
-
-
-
-
-
-
+ 
+        do {
+            Aluno alunoDinamico = new Aluno();
+            System.out.println("Digite o nome do Aluno: ");
+            alunoDinamico.setNome(leitor.nextLine()); 
+            System.out.println("Digite o e-mail do Aluno: ");
+            alunoDinamico.setEmail(leitor.nextLine());
+            System.out.println("Digite a idade do Aluno: ");
+            alunoDinamico.setIdade(leitor.nextInt());     
+            listaDinamicaDeAlunos.add(alunoDinamico);
+            
+        }while ( Aluno.escolha() == "ns");
 
 
     }

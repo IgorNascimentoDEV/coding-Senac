@@ -77,6 +77,10 @@ public abstract class Personagem{
 
     }
 
+    protected void gritoGuerra(){
+        System.out.println("AAAAAH");
+    }
+
 
 /*----------Métodos Acessores----------*/
 

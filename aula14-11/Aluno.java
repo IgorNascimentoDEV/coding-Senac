@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Aluno {
     //Atributos
     private int id;
@@ -22,7 +24,9 @@ public class Aluno {
         this.idade = idade;
     }
 
+    public Aluno(){
 
+    }
 
     //Sobrescrita do metodo toString
     @Override
@@ -54,5 +58,15 @@ public class Aluno {
     }
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+
+    public static String escolha(){
+        Scanner leitor = new Scanner(System.in);
+        String escolha;
+        System.out.println("Deseja continuar? s p/ sim ...");
+        escolha = leitor.nextLine();
+        
+        return escolha.toLowerCase();
     }
 }

@@ -9,6 +9,10 @@ public class Cavaleiro extends Personagem{
         super(nome, arma);
     }
 
+    public void gritoGuerra(){
+        System.out.println("IIIIAAAAAh");
+    }
+
  
     //metodos acessores
     public void setPoderCavalheiro(int poderCavalheiro, boolean escudo) {
