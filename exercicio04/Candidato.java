@@ -1,15 +1,29 @@
 public class Candidato{
     private int id;
     private String nome;
-    private String idade;
+    private int idade;
     private String cidade;
+    
     private Entrevista entrevista;
 
     
 
 
+  
+    
+        
+        
+   
+   
+
+    @Override
+    public String toString(){
+        return "Nome" + " " + getNome();
+    }
 
 
+
+    
     //Metodos Acessores
     public String getNome() {
         return nome;
@@ -17,10 +31,10 @@ public class Candidato{
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
-    public void setIdade(String idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
     public String getCidade() {
@@ -29,4 +43,10 @@ public class Candidato{
     public void setCidade(String cidade) {
         this.cidade = cidade;
     } 
+    public Entrevista getEntrevista() {
+        return entrevista;
+    }
+    public void setEntrevista(Entrevista entrevista) {
+        this.entrevista = entrevista;
+    }
 }

@@ -52,8 +52,9 @@ public class Principal{
         //Cadastrando alunos na Lista:
         ArrayList<Aluno> listaDinamicaDeAlunos = new ArrayList<>();
 
- 
+        int escolha = 0;
         do {
+            
             Aluno alunoDinamico = new Aluno();
             System.out.println("Digite o nome do Aluno: ");
             alunoDinamico.setNome(leitor.nextLine()); 
@@ -62,8 +63,10 @@ public class Principal{
             System.out.println("Digite a idade do Aluno: ");
             alunoDinamico.setIdade(leitor.nextInt());     
             listaDinamicaDeAlunos.add(alunoDinamico);
+            System.out.println("Deseja continuar? 1 p/ sim ...");
+            escolha = leitor.nextInt();
             
-        }while ( Aluno.escolha() == "ns");
+        }while (escolha == 1);
 
 
     }

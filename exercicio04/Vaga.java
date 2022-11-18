@@ -3,7 +3,7 @@ public class Vaga {
     private String local;
     private String data;
     private String modalidade;
-
+    private int idVaga;
 
 
     //Metodos Acessores

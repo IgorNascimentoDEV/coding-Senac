@@ -4,6 +4,7 @@ public class Entrevista {
     private double salarioOferecido;
     private String nivelCandidato;
     private String status;
+    private int idEntrevista;
 
 
 

@@ -61,12 +61,5 @@ public class Aluno {
     }
 
 
-    public static String escolha(){
-        Scanner leitor = new Scanner(System.in);
-        String escolha;
-        System.out.println("Deseja continuar? s p/ sim ...");
-        escolha = leitor.nextLine();
-        
-        return escolha.toLowerCase();
-    }
+   
 }
