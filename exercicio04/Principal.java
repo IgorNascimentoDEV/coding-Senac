@@ -38,10 +38,17 @@ class Principal{
                 Candidato Candidato = new Candidato();
                 System.out.println("Digite o nome do Candidato: ");
                 Candidato.setNome(leitor.nextLine()); 
-                System.out.println("Digite o cidade do Candidato: ");
+                System.out.println("Digite o cidade do "+ Candidato.getNome()+":");
                 Candidato.setCidade(leitor.nextLine());
-                System.out.println("Digite a idade do Candidato: ");
-                Candidato.setIdade(leitor.nextInt());     
+                System.out.println("Digite a idade do "+ Candidato.getNome()+":");
+                Candidato.setIdade(leitor.nextInt());   
+                System.out.println("Quais são as habilidades tecnicas do "+ Candidato.getNome()+"?");
+                Candidato.setHalibidadesTecnicas(leitor.nextLine());
+                System.out.println("Quais são as habilidades Interpessoais do "+ Candidato.getNome()+"?");
+                Candidato.setHalibiladesInterpessoais(leitor.nextLine());
+                System.out.println("Qual é o salario proposto para o "+ Candidato.getNome()+"?");
+                Candidato.setSalarioOferecido(leitor.nextDouble());
+                System.out.println("Qual é o nivel do "+ Candidato.getNome()+"?" +"\n" );  
                 listaDeCandidatos.add(Candidato);
                 System.out.println("Cadastro realizado com sucesso!");
 
@@ -54,6 +61,9 @@ class Principal{
                 System.out.println("Digite o tempo de alocação da vaga");
                 vaga.setData(leitor.nextLine());
                 System.out.println("Digite a Modalidade da vaga");
+                vaga.setModalidade(leitor.nextLine());
+                listaDeVaga.add(vaga);
+                System.out.println("Cadastro realizado com sucesso!");
 
             }
         }while(escolha() != 3);

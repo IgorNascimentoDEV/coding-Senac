@@ -4,7 +4,13 @@ public class Candidato{
     private int idade;
     private String cidade;
     
-    private Entrevista entrevista;
+    private String halibidadesTecnicas;
+    private String halibiladesInterpessoais;
+    private double salarioOferecido;
+    private String nivelCandidato;
+    private String status;
+    
+    
 
     
 
@@ -15,7 +21,7 @@ public class Candidato{
         
    
    
-
+    //Sobrescrevendo metodo toString
     @Override
     public String toString(){
         return "Nome" + " " + getNome();
@@ -43,10 +49,34 @@ public class Candidato{
     public void setCidade(String cidade) {
         this.cidade = cidade;
     } 
-    public Entrevista getEntrevista() {
-        return entrevista;
+    public String getHalibidadesTecnicas() {
+        return halibidadesTecnicas;
     }
-    public void setEntrevista(Entrevista entrevista) {
-        this.entrevista = entrevista;
+    public void setHalibidadesTecnicas(String halibidadesTecnicas) {
+        this.halibidadesTecnicas = halibidadesTecnicas;
+    }
+    public String getHalibiladesInterpessoais() {
+        return halibiladesInterpessoais;
+    }
+    public void setHalibiladesInterpessoais(String halibiladesInterpessoais) {
+        this.halibiladesInterpessoais = halibiladesInterpessoais;
+    }
+    public double getSalarioOferecido() {
+        return salarioOferecido;
+    }
+    public void setSalarioOferecido(double salarioOferecido) {
+        this.salarioOferecido = salarioOferecido;
+    }
+    public String getNivelCandidato() {
+        return nivelCandidato;
+    }
+    public void setNivelCandidato(String nivelCandidato) {
+        this.nivelCandidato = nivelCandidato;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
