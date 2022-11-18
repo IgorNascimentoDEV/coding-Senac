@@ -9,6 +9,7 @@ public class Candidato{
     private double salarioOferecido;
     private String nivelCandidato;
     private String status;
+    private Vaga vagaid;
     
     
 
@@ -24,7 +25,7 @@ public class Candidato{
     //Sobrescrevendo metodo toString
     @Override
     public String toString(){
-        return "Nome" + " " + getNome();
+        return "Nome" + " " + getNome() + getHalibidadesTecnicas();
     }
 
 

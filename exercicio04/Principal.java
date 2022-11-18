@@ -44,14 +44,18 @@ class Principal{
                 Candidato.setIdade(leitor.nextInt());   
                 System.out.println("Quais são as habilidades tecnicas do "+ Candidato.getNome()+"?");
                 Candidato.setHalibidadesTecnicas(leitor.nextLine());
+                Candidato.setHalibidadesTecnicas(leitor.nextLine());
                 System.out.println("Quais são as habilidades Interpessoais do "+ Candidato.getNome()+"?");
                 Candidato.setHalibiladesInterpessoais(leitor.nextLine());
                 System.out.println("Qual é o salario proposto para o "+ Candidato.getNome()+"?");
                 Candidato.setSalarioOferecido(leitor.nextDouble());
-                System.out.println("Qual é o nivel do "+ Candidato.getNome()+"?" +"\n" );  
+                System.out.println("Qual é o nivel do "+ Candidato.getNome()+"?" +" \n 1 - Aprovado \n 2 - Inapto \n 3 - Contratado" );
+                Candidato.setStatus(leitor.nextLine());  
+                Candidato.setStatus(leitor.nextLine());  
                 listaDeCandidatos.add(Candidato);
                 System.out.println("Cadastro realizado com sucesso!");
-
+                break;
+                
                 case 2:
                 Vaga vaga = new Vaga();
                 System.out.println("Digite o nome da Vaga");
@@ -64,14 +68,21 @@ class Principal{
                 vaga.setModalidade(leitor.nextLine());
                 listaDeVaga.add(vaga);
                 System.out.println("Cadastro realizado com sucesso!");
+                break;
+
+                case 3:
+                for (Vaga vagalist : listaDeVaga) {
+                    System.out.println(vagalist.toString());
+                }
 
             }
-        }while(escolha() != 3);
+        }while(escolha() != 4);
          
 
         for (Candidato candidato : listaDeCandidatos) {
             System.out.println(candidato.toString());
         }
+     
       
 
        
@@ -81,8 +92,9 @@ class Principal{
         Scanner leitor = new Scanner(System.in);
         int escolha = 0;
         System.out.println("1 - Cadastra um novo Candidato");
-        System.out.println("2 - Cadastra uma nova Entrevista");
-        System.out.println("3 - Para Sair do sistema");
+        System.out.println("2 - Cadastra uma nova Vaga");
+        System.out.println("3 - Lista vagas");
+        System.out.println("4 - Para Sair do sistema");
         escolha = leitor.nextInt();
         return escolha;
     }
