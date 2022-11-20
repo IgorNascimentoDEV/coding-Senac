@@ -1,9 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.xml.transform.Source;
+
 public class Vaga {
     private String nomeVaga;
     private String local;
     private String data;
     private String modalidade;
-    private int idVaga;
+    private int vaga;
+
+
+
+
+   
+
+    
+  
+      //Sobrescrevendo metodo toString
+    @Override
+    public String toString(){
+        return "*Nome da Vaga: " + getNomeVaga() + " \n*Local: " + getLocal() +" \n*Modalidade: " + getModalidade(); 
+    }
+
+    
+
 
 
     //Metodos Acessores

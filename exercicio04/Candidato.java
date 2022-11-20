@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Candidato{
     private int id;
     private String nome;
@@ -11,12 +14,7 @@ public class Candidato{
     private String status;
     private Vaga vagaid;
     
-    
 
-    
-
-
-  
     
         
         
