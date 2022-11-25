@@ -1,7 +1,5 @@
 package controller;
 
-import model.Candidato;
-import model.StatusEnum;
 import model.Vaga;
 
 import java.util.ArrayList;
@@ -10,16 +8,17 @@ import java.util.Scanner;
 
 public class VagaController {
 
+    private static int sequence;
     private Vaga vaga;
     private static final ArrayList<Vaga> vagasList = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
-    public Vaga getVaga() {
-        return vaga;
+    public static int getSequence() {
+        return sequence;
     }
 
-    public void setVaga(Vaga vaga) {
-        this.vaga = vaga;
+    public static void setSequence(int sequence) {
+        VagaController.sequence = sequence;
     }
 
     public void cadastraVaga() {
@@ -31,18 +30,18 @@ public class VagaController {
         /**
          * Bloco responsável pela geração do id
          */
-        int idTmp;
-
-        if (vaga.getGenerator() == 0) {
-            vaga.setGenerator(1);
+        if (getSequence() == 0) {
+            setSequence(1);
         } else {
-            idTmp = vaga.getGenerator();
-            vaga.setGenerator(idTmp + 1);
+            int idTmp;
+            idTmp = getSequence();
+            setSequence(idTmp + 1);
         }
 
-        vaga.setIdVaga(vaga.getGenerator());
-        vaga.setCodigoVaga(vaga.getGenerator() + 1000);
-
+        try{
+        vaga.setIdVaga(getSequence());
+        vaga.setCodigoVaga(getSequence() + 1000);
+        System.out.println("== CADASTRO DE VAGA ==");
         System.out.println("Digite o nome da Vaga:");
         vaga.setNomeVaga(leitor.nextLine());
         System.out.println("Digite a localidade:");
@@ -55,15 +54,37 @@ public class VagaController {
         vagasList.add(vaga);
         vaga.setVagasList(vagasList);
 
-        System.out.println("Cadastro realizado com sucesso!\n");
+        System.out.println("Cadastro realizado com sucesso! Clique em qualquer tecla para continuar: \n");
+        sc.nextLine();
+        }catch(NullPointerException error){
+            System.err.println("Valor nulo para o campo, repita a operação ou tente novamente");
+            System.err.println("Tecle ENTER ou qualquer outra tecla para continuar:");
+            sc.nextLine();
+        }catch (InputMismatchException error){
+            System.err.println("Valor inválido, repita a operação ou tente novamente.");
+            System.err.println("Tecle ENTER ou qualquer outra tecla para continuar:");
+            sc.nextLine();
+        }catch (IndexOutOfBoundsException error){
+            System.err.println("Lista vazia ou registro não cadastrado para o ID informado, repita a operação ou tente novamente.");
+            System.err.println("Tecle ENTER ou qualquer outra tecla para continuar:");
+            sc.nextLine();
+        }
     }
 
     public void listarVagas() {
         try {
+
             System.out.println("============= LISTA DE VAGAS ============");
             for (Vaga vaga : vaga.getVagasList()) {
                 System.out.println(vaga.toString());
             }
+
+            if (vaga.getVagasList().isEmpty()){
+                System.err.println("Lista de vagas vazia!");
+            }
+
+            System.out.println("Clique em qualquer tecla para continuar: ");
+            sc.nextLine();
         } catch (NullPointerException error) {
             System.err.println("Não há vagas cadastradas, clique em qualquer tecla para continuar.");
             sc.nextLine();
@@ -72,15 +93,61 @@ public class VagaController {
 
     public void deletarVaga() {
         try {
+            System.out.println("=== DELETAR VAGA ===");
             System.out.println("Digite o ID da vaga:");
             int escolha = sc.nextInt();
             vagasList.remove((escolha - 1));
             System.out.println("Vaga deletada com sucesso!\n");
+            System.out.println("Clique em qualquer tecla para continuar: ");
+            sc.nextLine();
+            sc.nextLine();
         } catch (InputMismatchException error) {
             System.err.println("ID inválido. Repita a operação!\n");
             sc.nextLine();
         } catch (IndexOutOfBoundsException error) {
             System.err.println("Não há vaga cadastrada para o ID informado. Repita a operação!\n");
+            sc.nextLine();
+        }
+    }
+
+    public void atualizarVaga(){
+
+        int escolha;
+        int idTmp;
+        try{
+            System.out.println("===== ATUALIZAR VAGAS =====");
+            System.out.println("Digite o ID da vaga:");
+            escolha = sc.nextInt();
+            idTmp = escolha - 1;
+            vaga.getVagasList().get(idTmp);
+            String input;
+
+            System.out.println("Digite o nome da Vaga:");
+            input = sc.nextLine();
+            input = sc.nextLine();
+            vaga.getVagasList().get(idTmp).setNomeVaga(input);
+
+            System.out.println("Digite a localidade:");
+            input = sc.nextLine();
+            vaga.getVagasList().get(idTmp).setLocal(input);
+
+            System.out.println("Digite o tempo de alocação da vaga:");
+            input = sc.nextLine();
+            vaga.getVagasList().get(idTmp).setData(input);
+
+            System.out.println("Digite a Modalidade da vaga:");
+            input = sc.nextLine();
+            vaga.getVagasList().get(idTmp).setModalidade(input);
+            System.out.println("Vaga Atualizada com sucesso. Clique em qualquer tecla para continuar: ");
+            sc.nextLine();
+        }catch(NullPointerException error){
+            System.err.println("Null");
+            sc.nextLine();
+        }catch (InputMismatchException error){
+            System.err.println("ID inválido, clique em qualquer tecla para continuar.");
+            sc.nextLine();
+        }catch (IndexOutOfBoundsException error){
+            System.err.println("Não há vagas cadastradas para o ID.");
             sc.nextLine();
         }
     }

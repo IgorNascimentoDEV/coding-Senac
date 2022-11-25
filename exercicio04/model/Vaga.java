@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Vaga {
 
-    private static int generator;
     private int idVaga;
     private String nomeVaga;
     private String local;
@@ -12,6 +11,18 @@ public class Vaga {
     private String modalidade;
     private int codigoVaga;
     private ArrayList<Vaga> vagasList = new ArrayList<>();
+
+    public Vaga() {
+    }
+
+    public Vaga(int idVaga, String nomeVaga, String local, String data, String modalidade, int codigoVaga) {
+        this.idVaga = idVaga;
+        this.nomeVaga = nomeVaga;
+        this.local = local;
+        this.data = data;
+        this.modalidade = modalidade;
+        this.codigoVaga = codigoVaga;
+    }
 
     public String getLocal() {
         return local;
@@ -61,14 +72,6 @@ public class Vaga {
         this.vagasList = vagasList;
     }
 
-    public static int getGenerator() {
-        return generator;
-    }
-
-    public static void setGenerator(int generator) {
-        Vaga.generator = generator;
-    }
-
     public int getIdVaga() {
         return idVaga;
     }
@@ -79,7 +82,8 @@ public class Vaga {
 
     @Override
     public String toString() {
-        return "============ DADOS DA VAGA " + this.idVaga + " ============" +
+        return "============ DADOS DA VAGA ============" +
+                "\nID: " + this.idVaga +
                 "\nCódigo: " + this.codigoVaga +
                 "\nNome da Vaga: " + this.nomeVaga +
                 "\nLocal: " + this.local +

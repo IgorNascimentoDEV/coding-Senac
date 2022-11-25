@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class Candidato {
-    private static int generator;
     private int id;
     private String nome;
     private int idade;
@@ -15,6 +14,22 @@ public class Candidato {
     private StatusEnum status;
     private int codigoVaga;
     private ArrayList<Candidato> candidatosList = new ArrayList<>();
+
+    public Candidato() {
+    }
+
+    public Candidato(int id, String nome, int idade, String cidade, String halibidadesTecnicas, String halibiladesInterpessoais, double salarioOferecido, String nivelCandidato, StatusEnum status, int codigoVaga) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.cidade = cidade;
+        this.halibidadesTecnicas = halibidadesTecnicas;
+        this.halibiladesInterpessoais = halibiladesInterpessoais;
+        this.salarioOferecido = salarioOferecido;
+        this.nivelCandidato = nivelCandidato;
+        this.status = status;
+        this.codigoVaga = codigoVaga;
+    }
 
     public String getNome() {
         return nome;
@@ -102,14 +117,6 @@ public class Candidato {
 
     public void setCodigoVaga(int codigoVaga) {
         this.codigoVaga = codigoVaga;
-    }
-
-    public static int getGenerator() {
-        return generator;
-    }
-
-    public static void setGenerator(int generator) {
-        Candidato.generator = generator;
     }
 
     @Override

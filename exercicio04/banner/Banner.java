@@ -32,8 +32,7 @@ public class Banner {
                 "    controle, responsáveis por alocar os métodos e as regras do sistema, como geração do id para identificar os registros e realizar deletes,\n" +
                 "    por exemplo.\n" +
                 "  - A classe Banner da package banner possui o banner/logo ACCENTURE E informaçoes pertinentes para o entendimento da aplicação.\n" +
-                "  - Por fim, a classe Application é responsável pela execução da applicação.\n" +
-                "\n");
+                "  - Por fim, a classe Application é responsável pela execução da applicação.\n");
         System.out.println(informacoes);
     }
 }

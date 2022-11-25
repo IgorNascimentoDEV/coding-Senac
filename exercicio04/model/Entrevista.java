@@ -1,13 +1,11 @@
 package model;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Entrevista {
 
-    private static int generator;
     private int id;
     private String dataEntrevista;
     private int codigoVaga;
@@ -18,6 +16,21 @@ public class Entrevista {
     private BigDecimal salarioProposto;
     private StatusEnum statusEnum;
     private ArrayList<Entrevista> entrevistasList = new ArrayList<>();
+
+    public Entrevista() {
+    }
+
+    public Entrevista(int id, String dataEntrevista, int codigoVaga, String nomecandidato, List<String> softSkills, List<String> skillsTecnicos, SenioridadeEnum nivelProposto, BigDecimal salarioProposto, StatusEnum statusEnum) {
+        this.id = id;
+        this.dataEntrevista = dataEntrevista;
+        this.codigoVaga = codigoVaga;
+        this.nomecandidato = nomecandidato;
+        this.softSkills = softSkills;
+        this.skillsTecnicos = skillsTecnicos;
+        this.nivelProposto = nivelProposto;
+        this.salarioProposto = salarioProposto;
+        this.statusEnum = statusEnum;
+    }
 
     public String getDataEntrevista() {
         return dataEntrevista;
@@ -99,13 +112,6 @@ public class Entrevista {
         this.statusEnum = statusEnum;
     }
 
-    public static int getGenerator() {
-        return generator;
-    }
-
-    public static void setGenerator(int generator) {
-        Entrevista.generator = generator;
-    }
 
     @Override
     public String toString() {

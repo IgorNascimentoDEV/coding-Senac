@@ -2,7 +2,6 @@ package controller;
 
 import model.Candidato;
 import model.StatusEnum;
-import model.Vaga;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -10,13 +9,18 @@ import java.util.Scanner;
 
 public class CandidatoController {
 
-    private Controller controller;
-    private static Vaga vaga;
-    private Candidato candidato = new Candidato();
-    private VagaController vagaController;
+    private static int sequence;
+    private Candidato candidato;
     private static final ArrayList<Candidato> candidatosList = new ArrayList<>();
-
     Scanner sc = new Scanner(System.in);
+
+    public static int getSequence() {
+        return sequence;
+    }
+
+    public static void setSequence(int sequence) {
+        CandidatoController.sequence = sequence;
+    }
 
     public void cadastraCandidato() {
 
@@ -28,15 +32,16 @@ public class CandidatoController {
          * Bloco responsável pela geração do id
          */
         int idTmp;
-        if (candidato.getGenerator() == 0) {
-            candidato.setGenerator(1);
+        if (getSequence() == 0) {
+            setSequence(1);
         } else {
-            idTmp = candidato.getGenerator();
-            candidato.setGenerator(idTmp + 1);
+            idTmp = getSequence();
+            setSequence(idTmp + 1);
         }
 
-        candidato.setId(candidato.getGenerator());
-
+        try{
+        candidato.setId(getSequence());
+        System.out.println("== CADASTRO DE CANDIDATO ==");
         System.out.println("Digite o nome do Candidato: ");
         candidato.setNome(leitor.nextLine());
         System.out.println("Digite o cidade do " + candidato.getNome() + ":");
@@ -58,16 +63,40 @@ public class CandidatoController {
 
         candidatosList.add(candidato);
         candidato.setCandidatosList(candidatosList);
-        System.out.println("Cadastro realizado com sucesso!");
+
+        System.out.println("Cadastro realizado com sucesso! Clique em qualquer tecla para continuar: \n");
+        sc.nextLine();
+
+        }catch(NullPointerException error){
+            System.err.println("Valor nulo para o campo, repita a operação ou tente novamente");
+            System.err.println("Tecle ENTER ou qualquer outra tecla para continuar:");
+            sc.nextLine();
+        }catch (InputMismatchException error){
+            System.err.println("Valor inválido, repita a operação ou tente novamente.");
+            System.err.println("Tecle ENTER ou qualquer outra tecla para continuar:");
+            sc.nextLine();
+        }catch (IndexOutOfBoundsException error){
+            System.err.println("Lista vazia ou registro não cadastrado para o ID informado, repita a operação ou tente novamente.");
+            System.err.println("Tecle ENTER ou qualquer outra tecla para continuar:");
+            sc.nextLine();
+        }
     }
 
     public void listarCandidatos() throws NullPointerException {
 
         try {
+
             for (Candidato candidato : candidato.getCandidatosList()) {
                 System.out.println("============= LISTA DE CANDIDATOS ============");
                 System.out.println(candidato.toString());
             }
+
+            if (candidato.getCandidatosList().isEmpty()){
+                System.err.println("Lista de candidatos vazia!");
+            }
+
+            System.out.println("Clique em qualquer tecla para continuar: ");
+            sc.nextLine();
         } catch (NullPointerException error) {
             System.err.println("Não há candidatos cadastrados, clique em qualquer tecla para continuar.");
             sc.nextLine();
@@ -76,15 +105,77 @@ public class CandidatoController {
 
     public void deletarCandidato() {
         try {
+            System.out.println("=== DELETAR CANDIDATO ===");
             System.out.println("Digite o ID do candidato:");
             int escolha = sc.nextInt();
             candidatosList.remove((escolha - 1));
             System.out.println("Candidato deletada com sucesso!\n");
+            System.out.println("Clique em qualquer tecla para continuar: ");
+            sc.nextLine();
+            sc.nextLine();
         } catch (InputMismatchException error) {
             System.err.println("ID inválido. Repita a operação!\n");
             sc.nextLine();
         } catch (IndexOutOfBoundsException error) {
             System.err.println("Não há candidato cadastrado para o ID informado. Repita a operação!\n");
+            sc.nextLine();
+        }
+    }
+
+    public void atualizarCandidato(){
+
+        int escolha;
+        double escolhaD;
+        int idTmp;
+        try{
+            System.out.println("===== ATUALIZAR CANDIDATO =====");
+            System.out.println("Digite o ID do candidato:");
+            escolha = sc.nextInt();
+            idTmp = escolha - 1;
+            candidato.getCandidatosList().get(idTmp);
+            String input;
+
+            System.out.println("Digite o nome do Candidato: ");
+            input = sc.nextLine();
+            input = sc.nextLine();
+            candidato.getCandidatosList().get(idTmp).setNome(input);
+
+            System.out.println("Digite o cidade do " + candidato.getNome() + ":");
+            input = sc.nextLine();
+            candidato.getCandidatosList().get(idTmp).setCidade(input);
+
+            System.out.println("Digite a idade do " + candidato.getNome() + ":");
+            escolha = sc.nextInt();
+            candidato.getCandidatosList().get(idTmp).setIdade(escolha);
+
+            System.out.println("Quais são as habilidades tecnicas do " + candidato.getNome() + "?");
+            input = sc.nextLine();
+            input = sc.nextLine();
+            candidato.getCandidatosList().get(idTmp).setHalibidadesTecnicas(input);
+
+            System.out.println("Quais são as habilidades Interpessoais do " + candidato.getNome() + "?");
+            input = sc.nextLine();
+            candidato.getCandidatosList().get(idTmp).setHalibiladesInterpessoais(input);
+
+            System.out.println("Qual é o salario proposto para o " + candidato.getNome() + "?");
+            escolhaD = sc.nextDouble();
+            candidato.getCandidatosList().get(idTmp).setSalarioOferecido(escolhaD);
+
+            System.out.println("Digite o código da vaga: ");
+            escolha = sc.nextInt();
+            candidato.getCandidatosList().get(idTmp).setCodigoVaga(escolha);
+
+            System.out.println("Candidato atualizada com sucesso. Clique em qualquer tecla para continuar: ");
+            sc.nextLine();
+
+        }catch(NullPointerException error){
+            System.err.println("Lista de entrevitas vazia ou nula.");
+            sc.nextLine();
+        }catch (InputMismatchException error){
+            System.err.println("ID inválido, clique em qualquer tecla para continuar.");
+            sc.nextLine();
+        }catch (IndexOutOfBoundsException error){
+            System.err.println("Não há entrevistas cadastradas para o ID.");
             sc.nextLine();
         }
     }
