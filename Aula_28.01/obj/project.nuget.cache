@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ocfZl4mv7usIdtKHnmevMh0GpKjimDMgJAF6Z4OTn9qP4fw2Zh9mEJxp2iJ+KPAiB6SQnUEdeCDf2U+DhONkDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Facsenac\\Desktop\\Aula_28.01\\Aula_28.01.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Facsenac\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512",
+    "C:\\Users\\Facsenac\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Facsenac\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
